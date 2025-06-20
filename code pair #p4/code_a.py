@@ -2,6 +2,7 @@
 # Code A
 
 
+
 def value(self):
     fieldname, discriminator = self.type_map[self.type]
     if fieldname is None:

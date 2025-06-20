@@ -1,6 +1,8 @@
 # Code pair #p1
 # Code A
 
+
+
 @_generative
 def yield_per(self, num: int) -> Self:
     # TODO: this throws away the iterator which may be holding

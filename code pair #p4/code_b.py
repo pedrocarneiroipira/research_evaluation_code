@@ -2,6 +2,7 @@
 # Code B
 
 
+
 @hybrid_property
 def value(self):
     fieldname, _ = self.type_map[self.type]  # Removed unused variable 'discriminator'

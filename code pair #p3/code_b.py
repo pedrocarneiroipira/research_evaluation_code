@@ -1,7 +1,9 @@
 # Code pair #p1
 # Code B
 
- @_generative
+
+
+@_generative
 def yield_per(self, num: int) -> Self:
     """Configure the row-fetching strategy to fetch `num` rows at a time.
 
@@ -19,6 +21,3 @@ def yield_per(self, num: int) -> Self:
     self._rows_fetched = False  # Initialize tracking if not already set
     return self
 
-def _fetch_rows(self):
-    """Internal method to fetch rows and mark them as fetched."""
-    self._rows_fetched = True

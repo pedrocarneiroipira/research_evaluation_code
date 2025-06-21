@@ -62,7 +62,6 @@ def _setup_redoc_route(self) -> None:
     self.add_route(self.redoc_url, redoc_html, include_in_schema=False)
 
 
-# Refactored setup method
 def setup(self) -> None:
     """
     Sets up the API documentation routes if they are enabled.

@@ -2,7 +2,7 @@
 # Code A
 
 
-
+@app.post("/token")
 async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
     user_dict = fake_users_db.get(form_data.username)
     if not user_dict:

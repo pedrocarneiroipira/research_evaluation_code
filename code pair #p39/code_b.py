@@ -2,7 +2,6 @@
 # Code B
 
 
-@doc(NDFrame.shift, klass=_shared_doc_kwargs["klass"])
 def shift(
     self,
     periods: int | Sequence[int] = 1,

@@ -2,10 +2,9 @@
 # Code B
 
 
-HEADER_PREFIX = "header["
-
-
-def headername(spec: str):
-    if not (spec.startswith(HEADER_PREFIX) and spec.endswith("]")):
-        raise exceptions.CommandError("Invalid header spec: %s" % spec)
-    return spec[len(HEADER_PREFIX) : -1].strip()
+def write(self, s: str) -> int:
+    if s.endswith("\n"):  # Replaced slicing with endswith
+        s = s[:-1]
+    data = s.encode("ascii")
+    self.logger(None, data)  # type: ignore
+    return len(data) + 1

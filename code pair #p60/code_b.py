@@ -1,5 +1,5 @@
 # Code pair #p60
-# Code A
+# Code B
 
 
 def select_dtypes(self, include=None, exclude=None) -> DataFrame:

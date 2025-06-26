@@ -1,5 +1,5 @@
 # Code pair #p77
-# Code A
+# Code B
 
 
 def run(self, args: List[str], opts: argparse.Namespace) -> None:

@@ -1,5 +1,5 @@
-# Code pair #p1
-# Code A
+# Code pair
+# Code B
 
 
 def urldefragauth(url):

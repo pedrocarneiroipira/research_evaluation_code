@@ -1,7 +1,5 @@
-# Code pair #p1
+# Code pair #p6
 # Code A
-
-
 
 
 def get_netrc_auth(url, raise_errors=False):

@@ -1,20 +1,22 @@
-# Code pair #p1
+# Code pair #p32
 # Code B
-
 
 
 def _normalize_values(self, values: str | list[str]) -> list[str]:
     """Normalize values to a list of strings"""
     return [values] if not isinstance(values, list) else values
 
+
 def _get_leading_option(self, value: str) -> str:
     """Get the leading option string for a given value"""
     return value + "=" if value.startswith("--") else value
 
+
 def _check_token_against_value(self, token: str, value: str) -> bool:
     """Check if a token matches a value"""
     leading = self._get_leading_option(value)
-    return token == value or (leading!= "" and token.startswith(leading))
+    return token == value or (leading != "" and token.startswith(leading))
+
 
 def _has_parameter_option_for_value(self, value: str, only_params: bool) -> bool:
     """Check if a parameter option exists for a given value"""
@@ -28,6 +30,7 @@ def _has_parameter_option_for_value(self, value: str, only_params: bool) -> bool
             return True
 
     return False
+
 
 def has_parameter_option(
     self, values: str | list[str], only_params: bool = False

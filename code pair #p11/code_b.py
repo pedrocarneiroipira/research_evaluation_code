@@ -1,6 +1,5 @@
-# Code pair #p1
+# Code pair #p11
 # Code B
-
 
 
 def _is_collapsible(self, incompatibility: Incompatibility) -> bool:

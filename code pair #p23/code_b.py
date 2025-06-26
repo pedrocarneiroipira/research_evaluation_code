@@ -1,6 +1,5 @@
-# Code pair #p1
+# Code pair #p23
 # Code B
-
 
 
 def _process_bitwise_value(self, value, super_convert):
@@ -15,11 +14,13 @@ def _process_bitwise_value(self, value, super_convert):
             int_value |= self._bitmap[v]
         return int_value
 
+
 def _process_non_bitwise_value(self, value, super_convert):
     """Process a non-bitwise value"""
     if value is not None and not isinstance(value, (int, str)):
         value = ",".join(value)
     return super_convert(value) if super_convert else value
+
 
 def bind_processor(self, dialect):
     """Bind a processor based on the retrieve_as_bitwise flag"""

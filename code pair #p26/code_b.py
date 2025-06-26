@@ -1,6 +1,5 @@
-# Code pair #p1
+# Code pair #p26
 # Code B
-
 
 
 def unquote_header_value(value, is_filename=False):
@@ -23,6 +22,6 @@ def unquote_header_value(value, is_filename=False):
         # replace sequence below on a UNC path has the effect of turning
         # the leading double slash into a single slash and then
         # _fix_ie_filename() doesn't work correctly.  See #458.
-        if not is_filename or not value.startswith('\\\\'):
+        if not is_filename or not value.startswith("\\\\"):
             return value.replace("\\\\", "\\").replace('\\"', '"')
     return value

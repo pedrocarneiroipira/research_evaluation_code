@@ -1,9 +1,9 @@
-# Code pair #p1
+# Code pair #p13
 # Code B
 
 
-
 PROGRESS_ELAPSED_STYLE = "progress.elapsed"
+
 
 def render(self, task: "Task") -> Text:
     """Show time elapsed."""

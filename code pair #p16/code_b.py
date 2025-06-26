@@ -1,6 +1,5 @@
-# Code pair #p1
+# Code pair #p16
 # Code B
-
 
 
 def select_renderer(self, request, renderers, format_suffix=None):
@@ -21,12 +20,14 @@ def select_renderer(self, request, renderers, format_suffix=None):
 
     raise exceptions.NotAcceptable(available_renderers=renderers)
 
+
 def _get_format(self, request, format_suffix):
     """
     Retrieve the format from the format suffix or query parameters.
     """
     format_query_param = self.settings.URL_FORMAT_OVERRIDE
     return format_suffix or request.query_params.get(format_query_param)
+
 
 def _find_matching_renderer(self, renderers, media_type_set):
     """
@@ -38,16 +39,17 @@ def _find_matching_renderer(self, renderers, media_type_set):
                 return self._select_media_type(renderer, media_type)
     return None, None
 
+
 def _select_media_type(self, renderer, media_type):
     """
     Select the most appropriate media type based on precedence.
     """
     media_type_wrapper = _MediaType(media_type)
     if _MediaType(renderer.media_type).precedence > media_type_wrapper.precedence:
-        full_media_type = ';'.join(
-            (renderer.media_type,) +
-            tuple(
-                '{}={}'.format(key, value)
+        full_media_type = ";".join(
+            (renderer.media_type,)
+            + tuple(
+                "{}={}".format(key, value)
                 for key, value in media_type_wrapper.params.items()
             )
         )

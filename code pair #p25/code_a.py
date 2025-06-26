@@ -1,6 +1,5 @@
-# Code pair #p1
+# Code pair #p25
 # Code A
-
 
 
 def prepend_scheme_if_needed(url, new_scheme):

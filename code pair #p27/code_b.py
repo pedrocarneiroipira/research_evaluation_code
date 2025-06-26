@@ -1,6 +1,5 @@
-# Code pair #p1
+# Code pair #p27
 # Code B
-
 
 
 def _read_cookie_pairs(s, off=0):

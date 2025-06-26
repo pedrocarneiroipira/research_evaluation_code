@@ -1,6 +1,5 @@
-# Code pair #p1
+# Code pair #p30
 # Code B
-
 
 
 def attach(self, filename=None, content=None, mimetype=None):
@@ -28,8 +27,11 @@ def attach(self, filename=None, content=None, mimetype=None):
     else:
         self._attach_file(filename, content, mimetype)
 
+
 def _attach_file(self, filename, content, mimetype):
-    mimetype = mimetype or mimetypes.guess_type(filename)[0] or DEFAULT_ATTACHMENT_MIME_TYPE
+    mimetype = (
+        mimetype or mimetypes.guess_type(filename)[0] or DEFAULT_ATTACHMENT_MIME_TYPE
+    )
     basetype, _ = mimetype.split("/", 1)
     if basetype == "text" and isinstance(content, bytes):
         try:

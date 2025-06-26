@@ -1,7 +1,5 @@
-# Code pair #p1
+# Code pair #p36
 # Code A
-
-
 
 
 def get_urls(self):
@@ -23,27 +21,27 @@ def get_urls(self):
 
             # Build the url pattern
             regex = route.url.format(
-                prefix=prefix,
-                lookup=lookup,
-                trailing_slash=self.trailing_slash
+                prefix=prefix, lookup=lookup, trailing_slash=self.trailing_slash
             )
 
-                # If there is no prefix, the first part of the url is probably
-                #   controlled by project's urls.py and the router is in an app,
-                #   so a slash in the beginning will (A) cause Django to give
-                #   warnings and (B) generate URLS that will require using '//'.
+            # If there is no prefix, the first part of the url is probably
+            #   controlled by project's urls.py and the router is in an app,
+            #   so a slash in the beginning will (A) cause Django to give
+            #   warnings and (B) generate URLS that will require using '//'.
             if not prefix:
                 if self._url_conf is path:
-                    if regex[0] == '/':
+                    if regex[0] == "/":
                         regex = regex[1:]
-                elif regex[:2] == '^/':
-                    regex = '^' + regex[2:]
+                elif regex[:2] == "^/":
+                    regex = "^" + regex[2:]
 
             initkwargs = route.initkwargs.copy()
-            initkwargs.update({
-                'basename': basename,
-                'detail': route.detail,
-            })
+            initkwargs.update(
+                {
+                    "basename": basename,
+                    "detail": route.detail,
+                }
+            )
 
             view = viewset.as_view(mapping, **initkwargs)
             name = route.name.format(basename=basename)

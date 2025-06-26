@@ -1,15 +1,14 @@
-# Code pair #p1
+# Code pair #p12
 # Code A
-
 
 
 def _find_best_version_for_package(
     self,
-        name: str,
-        required_version: str | None = None,
-        allow_prereleases: bool = False,
-        source: str | None = None,
-    ) -> tuple[str, str]:
+    name: str,
+    required_version: str | None = None,
+    allow_prereleases: bool = False,
+    source: str | None = None,
+) -> tuple[str, str]:
     from poetry.version.version_selector import VersionSelector
 
     selector = VersionSelector(self._get_pool())

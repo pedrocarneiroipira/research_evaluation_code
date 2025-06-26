@@ -1,6 +1,5 @@
-# Code pair #p1
+# Code pair #p37
 # Code A
-
 
 
 def strip_url(

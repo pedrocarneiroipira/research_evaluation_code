@@ -1,6 +1,5 @@
-# Code pair #p1
+# Code pair #p37
 # Code B
-
 
 
 def strip_url(
@@ -24,7 +23,9 @@ def strip_url(
     parsed_url = urlparse(url)
     netloc = parsed_url.netloc
 
-    if (strip_credentials or origin_only) and (parsed_url.username or parsed_url.password):
+    if (strip_credentials or origin_only) and (
+        parsed_url.username or parsed_url.password
+    ):
         netloc = netloc.split("@")[-1]
 
     if strip_default_port and parsed_url.port == default_ports.get(parsed_url.scheme):

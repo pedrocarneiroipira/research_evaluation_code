@@ -1,6 +1,5 @@
-# Code pair #p1
+# Code pair #p36
 # Code B
-
 
 
 def get_urls(self):
@@ -22,9 +21,7 @@ def get_urls(self):
 
             # Build the url pattern
             regex = route.url.format(
-                prefix=prefix,
-                lookup=lookup,
-                trailing_slash=self.trailing_slash
+                prefix=prefix, lookup=lookup, trailing_slash=self.trailing_slash
             )
 
             # If there is no prefix, the first part of the url is probably
@@ -33,16 +30,18 @@ def get_urls(self):
             #   warnings and (B) generate URLS that will require using '//'.
             if not prefix:
                 if self._url_conf is path:
-                    if regex.startswith('/'):
+                    if regex.startswith("/"):
                         regex = regex[1:]
-                elif regex.startswith('^/'):
-                    regex = '^' + regex[2:]
+                elif regex.startswith("^/"):
+                    regex = "^" + regex[2:]
 
             initkwargs = route.initkwargs.copy()
-            initkwargs.update({
-                'basename': basename,
-                'detail': route.detail,
-            })
+            initkwargs.update(
+                {
+                    "basename": basename,
+                    "detail": route.detail,
+                }
+            )
 
             view = viewset.as_view(mapping, **initkwargs)
             name = route.name.format(basename=basename)
